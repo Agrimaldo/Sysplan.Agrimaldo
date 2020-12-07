@@ -42,11 +42,6 @@ namespace Sysplan.Agrimaldo.API.Controllers
         [HttpDelete]
         public IActionResult Delete([FromBody] Guid id)
         {
-            //Guid _idClient = Guid.Empty;
-
-            //if (Guid.TryParse(id, out _idClient))
-            //    return Ok(ReturnStructure<object>.Return(false, "Id Inválido"));
-
             var result = clientService.Delete(id);
             return Ok(result);
         }
